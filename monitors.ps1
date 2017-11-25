@@ -1,5 +1,6 @@
 $monitors = get-ciminstance -class win32_pnpentity | where-object service -eq monitor
 
+# need to add client network test before cim call and db connect code
 $moncount = 0
 
 foreach ($monitor in $monitors)
